@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<h1>云润深度学习算法应用</h1>
+		</div>
+		<h2>基于卷积神经网络的文本分类器</h2>
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: left;"><b>CNN算法检测结果如下</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == "0"%}
+	<h2>最有可能是<font color="red">汽车新闻</font></h2>
+	{% elif prediction == "1"%}
+	<h2>最有可能是<font color="red">娱乐新闻</font></h2>
+	{% elif prediction == "2"%}
+	<h2>最有可能是<font color="red">军事新闻</font></h2>
+	{% elif prediction == "3"%}
+	<h2>最有可能是<font color="red">体育新闻</font></h2>
+	{% elif prediction == "4"%}
+	<h2>最有可能是<font color="red">科技新闻</font></h2>
+<!--	{% elif prediction == "5"%}-->
+<!--	<h2>最有可能是<font color="red">法语</font></h2>-->
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
